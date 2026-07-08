@@ -52,5 +52,6 @@
 		<appender-ref ref="STDOUT"/>
 		<appender-ref ref="FILE"/>
 	</root>
-	<logger name="com.example" level="DEBUG" />
+	<logger name="com.cursortrail" level="DEBUG" />
+ <logger name="net.runelite" level="WARN" />
 </configuration>

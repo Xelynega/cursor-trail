@@ -24,7 +24,12 @@ import net.runelite.client.ui.overlay.OverlayManager;
 
 @Slf4j
 @PluginDescriptor(
-		name = "Cursor Trail"
+	name = "Cursor Trail",
+	configName = "cursor_trail",
+	description = "Adds a configurable cursor trail for visual clarity",
+ enabledByDefault = true,
+ tags = {"cursor", "ui", "trail", "clarity"},
+ conflicts = {}
 )
 public class CursorTrailPlugin extends Plugin {
 	private CursorTrailOverlay overlay;

@@ -1,0 +1,16 @@
+---
+type: specs.openrewrite.org/v1beta/style
+name: com.cursortrail.TabStyle
+styleConfigs:
+  - org.openrewrite.java.style.TabsAndIndentsStyle:
+      useTabCharacter: true
+      tabSize: 4
+      indentSize: 4
+
+---
+type: specs.openrewrite.org/v1beta/recipe
+name: com.cursortrail.rewrite
+displayName: Force Tab Indentation
+recipeList:
+  - org.openrewrite.java.format.NormalizeTabsOrSpaces
+  - org.openrewrite.java.format.TabsAndIndents

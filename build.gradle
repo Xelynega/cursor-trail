@@ -1,10 +1,11 @@
 plugins {
 	id 'java'
- id 'org.openrewrite.rewrite' version 'latest.release'
+	id 'org.openrewrite.rewrite' version 'latest.release'
 }
 
 rewrite {
-    activeRecipe 'org.openrewrite.staticanalysis.CommonStaticAnalysis'
+	activeRecipe 'com.cursortrail.rewrite'
+	activeStyle 'com.cursortrail.TabStyle'
 }
 
 repositories {
@@ -31,8 +32,7 @@ dependencies {
 	testImplementation group: 'net.runelite', name:'client', version: runeLiteVersion
 	testImplementation group: 'net.runelite', name:'jshell', version: runeLiteVersion
 
- rewrite platform('org.openrewrite.recipe:rewrite-recipe-bom:latest.release')
- rewrite 'org.openrewrite.recipe:rewrite-static-analysis'
+	rewrite platform('org.openrewrite.recipe:rewrite-recipe-bom:latest.release')
 }
 
 group = 'com.cursortrail'
